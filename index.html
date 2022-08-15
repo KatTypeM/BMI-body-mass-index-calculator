@@ -1,0 +1,144 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=News+Cycle&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+	
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<!-- css -->
+	<link rel="stylesheet" href="style.css" />
+	
+	<!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<!-- title -->
+	<title>BMI / IBW Calculator</title>
+	
+	<!-- html -->
+	<!-- Body Mass Index / Ideal Body Weight Calculator  -->
+	<!-- Author: Jason DeBay -->
+	
+</head>
+<body>
+
+	<header>
+		<!-- Nav menu basic -->
+		<nav>
+			<div id="nav-page-title-left">BMI / IBW Calculator</div>
+			<div id="nav-control" class="page-menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Add Page Here</a></li>
+					<li><a href="#">Add Page Here</a></li>
+				</ul>
+			</div>
+			
+			<div class="container-burger nav-margin-right">
+				<div class="container-burger-rotate">
+					<div class="burger-line line1"></div>
+					<div class="burger-line line2"></div>
+					<div class="burger-line line3"></div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main class="container">
+	
+		<br>
+		
+		<!-- BMI Calulator-->
+		<section class="app-container">	
+			<article class="container-bmi">
+				<h3>BMI and IBW Calculator</h3>
+				<!-- checkbox us or metric -->
+				<div>
+					<input type='checkbox' class="cb-us-metric" id='cb-us'>
+					<label for="cb-us" >US</label>
+					<input type='checkbox' class="cb-us-metric" id='cb-metric'>
+					<label for="cb-metric">Metric</label>
+				</div>
+				<!-- input boxes -->
+				<div>
+					<label for='input-weight' id="label-weight">Weight:</label>
+					<input type='number' id='input-weight' size='5'>
+				</div>
+				<div>
+					<label for='input-height' id="label-height">Height:</label>
+					<input type='number' id='input-height' size='5'>
+				</div>
+				<!-- checkbox male or female -->
+				<div>
+					<input type='checkbox' class="cb-male-female" id='cb-male'>
+					<label for="cb-male">Male</label>
+					<input type='checkbox' class="cb-male-female" id='cb-female'>
+					<label for="cb-female">Female</label>
+				</div>
+				<!-- button calculate -->
+				<button id='btn-calc-bmi-ibw' class="btn-css">Calc BMI and IBW</button>
+				<!-- results area -->
+				<h3>BMI Calculation</h3>
+				<div id='display-bmi'>BMI result</div>
+				<h3>Ideal Body Weight Calculation</h3>
+				<div id='display-ibw'>IBW result</div>
+				<!-- button reset -->
+				<button class="btn-css" id="btn-reset-bmi">Reset</button>
+				<br>
+				<!-- notes for the app -->
+				<p><i>Notes:</i></p>
+				<p><i>*BMI calculations from <a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html#Interpreted">cdc.gov</a>.</i></p>
+				<p><i>**Ideal body weight formulas are from <a href="https://www.bmi-calculator.net/ideal-weight-calculator/">Ideal Body Weight calculations</a>. The following formulas are calculated: BMI formula, Broca Formula, Devine Formula, Robinson Formula, Miller Formula, Hamwi Formula, and Lemmens Formula.
+				</i></p>
+				
+			</article>
+		</section>
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+	</main>
+	
+	<!-- custom footer -->
+	<footer class="footer mt-auto py-3 bg-dark">
+		<div class="container">
+			<span class="text-muted">
+			<div class="row">
+				<div class="col-md-5">
+					Site Map
+				</div>
+				
+				<div class="col-md-1 border-end border-secondary"></div>
+				<div class="col-md-1"></div>
+				
+				<div class="col-md-5">
+					<p class="my-1">Social Media</p>
+					<p class="my-1">Copyright &copy <span id="footer-copyright-date"></span></p>
+				</div>
+			</div>
+			</span>
+		</div>
+	</footer>
+	
+	<!-- bootstrap js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- app js -->
+	<script src="main.js"></script>
+ </body>
+ </html>
